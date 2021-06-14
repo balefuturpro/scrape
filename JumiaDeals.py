@@ -41,3 +41,5 @@ for page in pages:
                 phone = int(html_soup.find_all('div',class_="phone-box show")[0].a.text)
                 #print(phone)
                 df = df.append(pd.DataFrame({'price': price, 'name': name, 'address': address, 'date': date, 'title': title, 'marque': marque, 'desc':desc,'phone':phone}, index = [0]), ignore_index = True)
+df
+df.to_csv('file_.csv', index=False, encoding='utf-8')
